@@ -1,60 +1,162 @@
-.box-content h1{
-    text-align: center;
-    color: grey;
+/* Landing Page Styling */
+.landing-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.landing-container {
+  width: 100%;
+  max-width: 900px;
+  padding: 40px 20px;
 }
-.box-content-quiz{
- background-color: black;
- height: 300px;
- width: 400px;
- margin: 0 auto;
-display: flex;
-justify-content: center;
-border-radius: 10px;
-align-items: center;
+
+.landing-content {
+  background: white;
+  border-radius: 30px;
+  padding: 60px 40px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
-.box-content-quiz-button{
-  background-color: white;
-  border-radius: 20px;
-  padding: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+.landing-title {
+  font-size: 48px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
-/* Button styling inside the white container */
-.box-content-quiz-button .quiz-btn{
-  background: linear-gradient(135deg, #6a5cff, #00d4ff);
-  color: #ffffff;
+
+.landing-subtitle {
+  font-size: 20px;
+  color: #4a5568;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.landing-button-container {
+  margin-bottom: 50px;
+}
+
+.start-quiz-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
   text-decoration: none;
-  display: inline-block;
-  border: none;
-  border-radius: 14px;
-  padding: 12px 20px;
+  padding: 18px 45px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.start-quiz-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+}
+
+.start-quiz-btn:active {
+  transform: translateY(-1px);
+}
+
+.start-quiz-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.start-quiz-btn:hover svg {
+  transform: translateX(5px);
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.feature-text {
   font-size: 16px;
   font-weight: 600;
-  letter-spacing: 0.3px;
-  cursor: pointer;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+  color: #2d3748;
 }
 
-.box-content-quiz-button .quiz-btn:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
-  filter: brightness(1.05);
+/* Responsive Design */
+@media (max-width: 768px) {
+  .landing-content {
+    padding: 40px 25px;
+  }
+  
+  .landing-title {
+    font-size: 36px;
+  }
+  
+  .landing-subtitle {
+    font-size: 18px;
+  }
+  
+  .start-quiz-btn {
+    padding: 16px 35px;
+    font-size: 18px;
+  }
+  
+  .features {
+    gap: 30px;
+  }
+  
+  .feature-icon {
+    font-size: 35px;
+  }
+  
+  .feature-text {
+    font-size: 14px;
+  }
 }
 
-.box-content-quiz-button .quiz-btn:active{
-  transform: translateY(0);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  filter: brightness(0.98);
-}
-
-.box-content-quiz-button .quiz-btn:focus{
-  outline: 2px solid #7bdcff;
-  outline-offset: 3px;
+@media (max-width: 480px) {
+  .landing-title {
+    font-size: 28px;
+  }
+  
+  .landing-subtitle {
+    font-size: 16px;
+  }
+  
+  .start-quiz-btn {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+  
+  .features {
+    gap: 20px;
+  }
 }
 
 /* Quiz Page Styling */
-body {
+body:not(.landing-page) {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
